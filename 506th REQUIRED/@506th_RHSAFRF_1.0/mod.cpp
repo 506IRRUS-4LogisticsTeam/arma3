@@ -1,0 +1,12 @@
+name = "506th RHS: AFRF";
+tooltipOwned="RHS: Armed Forces of the Russian Federation";
+picture = "rhsafrf\addons\rhs_main\data\rhs_logo_ca.paa";
+logoSmall = "rhsafrf\addons\rhs_main\data\rhs_logo_ca.paa";
+logo = "rhsafrf\addons\rhs_main\data\rhs_logo_ca.paa";
+logoOver = "rhsafrf\addons\rhs_main\data\rhs_logo_ca.paa";
+hidePicture = 0;
+hideName = 0;
+actionName = "Website";
+action = "http://www.rhsmods.org";
+description = "RHS: Armed Forces of the Russian Federation";
+overview = "RHS: Armed Forces of the Russian Federation";

@@ -1,0 +1,13 @@
+name = "506th CUP Terrains Core 1.19.3";
+picture = "\CUP\Terrains\cup_terrains_core\CUP_Terrains_Logo_mod.paa";
+actionName = "Website";
+action = "http://cup-arma3.org";
+logo = "\CUP\Terrains\cup_terrains_core\CUP_Terrains_Logo_mod.paa";
+logoOver = "\CUP\Terrains\cup_terrains_core\CUP_Terrains_Logo_mod.paa";
+tooltip = "Community Upgrade Project Terrains - Core 1.19.3";
+tooltipOwned = "Community Upgrade Project Terrains - Core 1.19.3";
+overview = "The Community Upgrade Project aims at importing all released assets from previous ArmA games into Arma 3, upgraded to fit closely with the quality and standards of the ArmA 3 assets. They're not a straight port, but individual items taken and upgraded to a new level. At the same time, CUP provides these assets as a resource for modders.";
+author = "The CUP Team";
+overviewPicture = "\CUP\Terrains\cup_terrains_core\CUP_Terrains_Logo_mod.paa";
+overviewText = "Community Upgrade Project Terrains - Core 1.19.3";
+overviewFootnote = "";
