@@ -1,10 +1,12 @@
-name: Publish Arma 3 Mods to R2
+name: Publish Arma 3 Repo to R2
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 concurrency:
   group: publish-arma3-r2
@@ -12,31 +14,33 @@ concurrency:
 
 jobs:
   publish:
-    runs-on: [self-hosted, windows, x64]
+    runs-on: ubuntu-latest
+
+    env:
+      R2_BUCKET: 506th-arma3-mods
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
 
     steps:
-      - name: Checkout repository with Git LFS
+      - name: Checkout Git metadata without LFS payloads
         uses: actions/checkout@v4
         with:
-          lfs: true
-          fetch-depth: 1
-          clean: true
+          fetch-depth: 2
+          lfs: false
 
-      - name: Ensure LFS content
-        shell: powershell
+      - name: Install dependencies
+        shell: bash
         run: |
-          git lfs install --local
-          git lfs pull
+          python3 -m pip install --upgrade boto3 requests
 
-      - name: Publish to Cloudflare R2
-        shell: powershell
+      - name: Publish changed files and rebuild manifest
+        shell: bash
         env:
-          RCLONE_CONFIG_R2_TYPE: s3
-          RCLONE_CONFIG_R2_PROVIDER: Cloudflare
-          RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
-          RCLONE_CONFIG_R2_REGION: auto
-          RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+          BEFORE_SHA: ${{ github.event.before }}
         run: |
-          powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\automation\Publish-From-GitHub.ps1"
+          python3 automation/publish_changed_to_r2.py
