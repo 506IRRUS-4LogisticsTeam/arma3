@@ -1,0 +1,42 @@
+name: Publish Arma 3 Mods to R2
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: publish-arma3-r2
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: [self-hosted, windows, x64]
+
+    steps:
+      - name: Checkout repository with Git LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 1
+          clean: true
+
+      - name: Ensure LFS content
+        shell: powershell
+        run: |
+          git lfs install --local
+          git lfs pull
+
+      - name: Publish to Cloudflare R2
+        shell: powershell
+        env:
+          RCLONE_CONFIG_R2_TYPE: s3
+          RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+          RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          RCLONE_CONFIG_R2_REGION: auto
+          RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\automation\Publish-From-GitHub.ps1"
