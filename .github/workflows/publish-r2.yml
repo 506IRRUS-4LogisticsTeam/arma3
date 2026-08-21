@@ -1,0 +1,46 @@
+name: Publish Arma 3 Repo to R2
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-arma3-r2
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    env:
+      R2_BUCKET: 506th-arma3-mods
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+
+    steps:
+      - name: Checkout Git metadata without LFS payloads
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          lfs: false
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          python3 -m pip install --upgrade boto3 requests
+
+      - name: Publish changed files and rebuild manifest
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          python3 automation/publish_changed_to_r2.py
