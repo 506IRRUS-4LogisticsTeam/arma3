@@ -1,0 +1,12 @@
+name = "Deformer";
+picture = "\GF_Deformer\data\GF_terrainsculptor_ca.paa";
+description = "Edit terrain height in 3den";
+logo = "\GF_Deformer\data\GF_terrainsculptor_ca.paa";
+logoOver = "\GF_Deformer\data\GF_terrainsculptor_ca.paa";
+actionName = "";
+action = "https://steamcommunity.com/sharedfiles/filedetails/?id=2822758266";
+tooltip = "Deformer";
+tooltipOwned = "Deformer";
+overview = "Edit terrain height in 3den";
+overviewPicture = "\GF_Deformer\data\GF_terrainsculptor_ca.paa";
+author = "Greenfist";
