@@ -1,0 +1,12 @@
+name = "506th IR - Maps Pack 4.0";
+picture = "logo_506th.paa";
+actionName = "Website";
+action = "http://www.506thir.net";
+description = "506th IR Custom Selection Maps Pack 1.0";
+logo = "logo_506th.paa";
+logoOver = "logo_506th.paa";
+tooltip = "506th IR Maps Pack 1.3";
+author = "506th Maps Team";
+overviewPicture = "logo_506th.paa";
+overviewText = "506th IR Maps Pack 1.3";
+overviewFootnote = "<br /><br /><t color='#999999'>This content is under APL-SA License.<t />";

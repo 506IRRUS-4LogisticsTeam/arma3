@@ -1,0 +1,12 @@
+name = "506th RHS: USF 4.0";
+tooltipOwned= "RHS: United States Forces";
+picture = "rhsusf\addons\rhsusf_main\data\rhs_logo_ca.paa";
+logoSmall = "rhsusf\addons\rhsusf_main\data\rhs_logo_ca.paa";
+logo = "rhsusf\addons\rhsusf_main\data\rhs_logo_ca.paa";
+logoOver = "rhsusf\addons\rhsusf_main\data\rhs_logo_ca.paa";
+hidePicture = 0;
+hideName = 0;
+actionName = "Website";
+action = "http://rhsmods.org/";
+description = "RHS: United States Armed Forces";
+overview="RHS: United States Armed Forces";

@@ -1,0 +1,10 @@
+name = "506th IR - Terrain Grid Menu";
+actionName = "Website";
+action = "http://www.506thir.net";
+description = "506th IR RU Terrain Grid Menu";
+tooltip = "506th IR RU Terrain Grid Menu";
+tooltipOwned = "506th IR RU Terrain Grid Menu";
+overview = "The 506th IR RU 506th IR RU Terrain Grid Menu allows you to set your terrain draw distance or turn grass off.";
+author = "506th Mod Team";
+overviewText = "506th IR RU Terrain Grid Menu";
+overviewFootnote = "<br /><br /><t color='#999999'>This content is under APL-SA License.<t />";
