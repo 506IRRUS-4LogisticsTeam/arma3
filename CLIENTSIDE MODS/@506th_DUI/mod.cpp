@@ -1,0 +1,14 @@
+name = "506th_DUI 1.12.11";
+picture = "logolarge.paa";
+actionName = "Website";
+action = "https://github.com/diwako/diwako_dui";
+logoSmall = "logolarge.paa";
+logo = "logosmall.paa";
+logoOver = "logosmall.paa";
+tooltip = "DUI - Squad Radar";
+tooltipOwned = "DUI - Squad Radar";
+description = "DUI - Squad Radar";
+overview  = "DUI - Squad Radar, is a mod which adds a compass and a list of units in your squad to your hud. The compass shows nearby squad mates and in which direction they are currently looking";
+author = "diwako";
+hidePicture = 0;
+hideName = 0;
