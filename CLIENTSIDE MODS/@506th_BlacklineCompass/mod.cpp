@@ -1,0 +1,14 @@
+name = "506thBlacklineCompass_v1.3.3";
+picture = "logolarge.paa";
+actionName = "";
+action = "";
+logoSmall = "logolarge.paa";
+logo = "logosmall.paa";
+logoOver = "logosmall.paa";
+tooltip = "Blackline Compass";
+tooltipOwned = "Blackline Compass";
+description = "Blackline Compass";
+overview = "Blackline Compass by Blackline Mods.";
+author = "Blackline Mods";
+hidePicture = 0;
+hideName = 0;

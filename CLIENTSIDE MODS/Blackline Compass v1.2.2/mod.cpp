@@ -1,0 +1,12 @@
+name = "Blackline Compass";
+picture = "blackline_mods_large.paa";
+logoSmall = "blackline_mods_small.paa";
+logo = "blackline_mods_small.paa";
+logoOver = "blackline_mods_small.paa";
+tooltip = "Blackline Compass";
+tooltipOwned = "Blackline Compass";
+description = "Blackline Compass";
+overview = "Blackline Compass by Blackline Mods.";
+author = "Blackline Mods";
+hidePicture = 0;
+hideName = 0;

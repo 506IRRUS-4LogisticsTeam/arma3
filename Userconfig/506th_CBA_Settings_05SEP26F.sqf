@@ -76,7 +76,7 @@ force ace_common_allowFadeMusic = true;
 force ace_common_checkExtensions = false;
 force ace_common_checkPBOsAction = 0;
 force ace_common_checkPBOsCheckAll = true;
-force ace_common_checkPBOsWhitelist = "[""JSRS_Soundmod_Cfg_RHS_AFRF_Weapons"",""JSRS_Soundmod_Cfg_RHS_GREF_Weapons"",""JSRS_Soundmod_Cfg_RHS_SAF_Weapons"",""JSRS_Soundmod_Cfg_RHS_USF_Weapons"",""JSRS_Soundmod_Configuration"",""JSRS_Soundmod_Soundfiles"",""jsrs2025_compat_ace3"",""jsrs2025_compat_cup_vehicles"",""jsrs2025_compat_cup_weapons"",""jsrs2025_sounds_explosions"",""jsrs2025_sounds_sfx"",""jsrs2025_sounds_vehicles"",""jsrs2025_sounds_weapons"",""bg_compassa3"",""Devas_AutoPilot"",""diwako_dui_buddy"",""diwako_dui_indicators"",""diwako_dui_linecompass"",""diwako_dui_main"",""diwako_dui_nametags"",""diwako_dui_radar"",""A3_HeadRangePlus"",""TFAR_Animations"",""506th_util_supression"",""506th_util_supression_sys"",""tao_foldmap_a3"",""506th_util_terraingridmenu"",""506th_util_immerse"",""506th_util_immerse_sys"",""stui_autobrightness"",""stui_core"",""stui_grouphud"",""stui_nametags"",""stui_stamina"",""ThermalImprovement"",""vts_weaponresting"",""VileHUD""]";
+force ace_common_checkPBOsWhitelist = "JSRS_Soundmod_Cfg_RHS_AFRF_Weapons,JSRS_Soundmod_Cfg_RHS_GREF_Weapons,JSRS_Soundmod_Cfg_RHS_SAF_Weapons,JSRS_Soundmod_Cfg_RHS_USF_Weapons,JSRS_Soundmod_Configuration,JSRS_Soundmod_Soundfiles,jsrs2025_compat_ace3,jsrs2025_compat_cup_vehicles,jsrs2025_compat_cup_weapons,jsrs2025_sounds_explosions,jsrs2025_sounds_sfx,jsrs2025_sounds_vehicles,jsrs2025_sounds_weapons,bg_compassa3,Devas_AutoPilot,diwako_dui_buddy,diwako_dui_indicators,diwako_dui_linecompass,diwako_dui_main,diwako_dui_nametags,diwako_dui_radar,A3_HeadRangePlus,TFAR_Animations,506th_util_supression,506th_util_supression_sys,tao_foldmap_a3,506th_util_terraingridmenu,506th_util_immerse,506th_util_immerse_sys,stui_autobrightness,stui_core,stui_grouphud,stui_nametags,stui_stamina,ThermalImprovement,vts_weaponresting,VileHUD,jsrs_soundmod_complete_edition_soundfiles,jsrs_soundmod_complete_edition,jsrs_soundmod_boats,jsrs_soundmod_sonic_cracks,jsrs_soundmod_weapons,jsrs_soundmod_environment,jsrs_soundmod_explosions,jsrs_soundmod_framework,jsrs_soundmod_landvehicles,jsrs_soundmod_movement,jsrs_soundmod_bullethits,jsrs_soundmod_helicopters,jsrs_soundmod_rhs_afrf_weapons,jsrs_soundmod_cfg_rhs_afrf_vehicles,jsrs_soundmod_cfg_rhs_afrf_air_vehicles,jsrs_soundmod_rhs_usf_weapons,jsrs_soundmod_cfg_rhs_usf_vehicles,jsrs_soundmod_cfg_rhs_usf_air_vehicles,jsrs_soundmod_rhs_gref_weapons,jsrs_soundmod_rhs_saf_weapons,blackline_compass";
 ace_common_displayTextColor = [0,0,0,0.1];
 ace_common_displayTextFontColor = [1,1,1,1];
 ace_common_epilepsyFriendlyMode = false;
@@ -94,7 +94,7 @@ force ace_cookoff_destroyVehicleAfterCookoff = false;
 force ace_cookoff_enableAmmobox = false;
 force ace_cookoff_enableAmmoCookoff = false;
 force ace_cookoff_enableFire = true;
-force ace_cookoff_probabilityCoef = 1;
+force ace_cookoff_probabilityCoef = 0.5;
 force ace_cookoff_removeAmmoDuringCookoff = true;
 
 // ACE Crew Served Weapons
@@ -148,8 +148,8 @@ force acex_field_rations_timeWithoutWater = 2;
 force acex_field_rations_waterSourceActions = 2;
 
 // ACE Fire
-force ace_fire_dropWeapon = 1;
-force ace_fire_enabled = true;
+force ace_fire_dropWeapon = 0;
+force ace_fire_enabled = false;
 force ace_fire_enableFlare = false;
 ace_fire_enableScreams = true;
 
@@ -314,8 +314,8 @@ force ace_medical_statemachine_cardiacArrestTime = 210;
 force ace_medical_statemachine_fatalInjuriesAI = 0;
 force ace_medical_statemachine_fatalInjuriesPlayer = 2;
 force ace_medical_useLimbDamage = 0;
-force ace_medical_vitals_simulateSpO2 = true;
-ace_medical_windowOnWakeUp = 1;
+force ace_medical_vitals_simulateSpO2 = false;
+ace_medical_windowOnWakeUp = 0;
 
 // ACE Medical Interface
 ace_medical_blockInputOnUiEvent = 1;
@@ -365,21 +365,21 @@ force ace_medical_treatment_advancedBandages = 0;
 force ace_medical_treatment_advancedDiagnose = 0;
 force ace_medical_treatment_advancedMedication = false;
 force ace_medical_treatment_allowBodyBagUnconscious = false;
-force ace_medical_treatment_allowGraveDigging = 1;
+force ace_medical_treatment_allowGraveDigging = 0;
 force ace_medical_treatment_allowLitterCreation = true;
 force ace_medical_treatment_allowSelfIV = 1;
 force ace_medical_treatment_allowSelfPAK = 1;
 force ace_medical_treatment_allowSelfStitch = 1;
 force ace_medical_treatment_allowSharedEquipment = 0;
 force ace_medical_treatment_bandageEffectiveness = 1;
-ace_medical_treatment_bandageRollover = true;
+force ace_medical_treatment_bandageRollover = false;
 force ace_medical_treatment_clearTrauma = 2;
 force ace_medical_treatment_consumePAK = 0;
 force ace_medical_treatment_consumeSurgicalKit = 0;
 force ace_medical_treatment_convertItems = 0;
 force ace_medical_treatment_cprSuccessChanceMax = 1;
 force ace_medical_treatment_cprSuccessChanceMin = 1;
-force ace_medical_treatment_graveDiggingMarker = true;
+force ace_medical_treatment_graveDiggingMarker = false;
 force ace_medical_treatment_holsterRequired = 0;
 force ace_medical_treatment_litterCleanupDelay = 30;
 force ace_medical_treatment_locationAdenosine = 0;
@@ -401,7 +401,7 @@ force ace_medical_treatment_medicSurgicalKit = 0;
 force ace_medical_treatment_numericalPulse = 1;
 force ace_medical_treatment_timeCoefficientPAK = 0;
 force ace_medical_treatment_treatmentTimeAutoinjector = 5;
-force ace_medical_treatment_treatmentTimeBodyBag = 15;
+force ace_medical_treatment_treatmentTimeBodyBag = 5;
 ace_medical_treatment_treatmentTimeCoeffZeus = 1;
 force ace_medical_treatment_treatmentTimeCPR = 15;
 force ace_medical_treatment_treatmentTimeGrave = 30;
@@ -446,8 +446,8 @@ force ace_finger_enabled = true;
 ace_finger_indicatorColor = [0.83,0.68,0.21,0.75];
 ace_finger_indicatorForSelf = true;
 force ace_finger_maxRange = 8;
-force ace_finger_proximityScaling = false;
-force ace_finger_sizeCoef = 1;
+ace_finger_proximityScaling = false;
+ace_finger_sizeCoef = 1;
 
 // ACE Pylons
 force ace_pylons_enabledForZeus = true;
@@ -633,7 +633,7 @@ ace_magazinerepack_repackLoadedMagazines = true;
 force ace_magazinerepack_timePerAmmo = 1.5;
 force ace_magazinerepack_timePerBeltLink = 4;
 force ace_magazinerepack_timePerMagazine = 1;
-ace_milr_showRangeHint = 1;
+ace_milr_showRangeHint = 0;
 force ace_overheating_cookoffCoef = 1;
 force ace_overheating_coolingCoef = 1;
 ace_overheating_displayTextOnJam = true;
@@ -679,7 +679,7 @@ BettIR_ViewDistance = 300;
 
 // Community Base Addons
 cba_diagnostic_ConsoleIndentType = -1;
-force cba_diagnostic_watchInfoRefreshRate = 0.2;
+cba_diagnostic_watchInfoRefreshRate = 0.2;
 force cba_disposable_dropUsedLauncher = 2;
 force cba_disposable_replaceDisposableLauncher = true;
 cba_events_repetitionMode = 1;
@@ -704,7 +704,7 @@ ctab_core_useMils = false;
 CUP_CheckCfgPatches = false;
 
 // Death and Hit Reactions
-force WBK_DeathAnimMod_Death_Chance = 100;
+force WBK_DeathAnimMod_Death_Chance = 10;
 force WBK_DeathAnimMod_Death_NearWall = true;
 force WBK_DeathAnimMod_Deaths_AI = true;
 force WBK_DeathAnimMod_Deaths_Dismember = true;
@@ -712,11 +712,11 @@ force WBK_DeathAnimMod_Deaths_Dismember_Num = "20";
 force WBK_DeathAnimMod_Deaths_Dismember_Vapor_Num = "40";
 force WBK_DeathAnimMod_Deaths_HUGEANIMS = true;
 force WBK_DeathAnimMod_Deaths_NECKSHOTS = true;
-force WBK_DeathAnimMod_Deaths_PLR = true;
+force WBK_DeathAnimMod_Deaths_PLR = false;
 force WBK_DeathAnimMod_Deaths_PRONE = true;
 force WBK_DeathAnimMod_Flinch_AI = true;
 force WBK_DeathAnimMod_Hit_AI = true;
-force WBK_DeathAnimMod_Hit_Chance = 50;
+force WBK_DeathAnimMod_Hit_Chance = 12;
 
 // DUI - Squad Radar - Indicators
 force diwako_dui_indicators_crew_range_enabled = false;
@@ -977,15 +977,15 @@ force lambs_main_radioGuer = 500;
 force lambs_main_radioShout = 100;
 force lambs_main_radioWest = 500;
 
-// Laxemann Suppress
-force force L_Suppress_blurIntensity = 0.45;
-force force L_Suppress_cameraShakeIntensity = 0.75;
-force force L_Suppress_desaturationIntensity = 0.5;
-force force L_Suppress_enabled = true;
-force force L_Suppress_impactIntensity = 0.5;
-force force L_Suppress_masterIntensity = 0.65;
-L_Suppress_pulseIntensity = 0.35;
-force force L_Suppress_radialBlurIntensity = 0.6;
+// 506th Suppress Fix
+force v506th_suppress_blurIntensity = 0.45;
+force v506th_suppress_cameraShakeIntensity = 0.75;
+force v506th_suppress_desaturationIntensity = 0.5;
+force v506th_suppress_enabled = true;
+force v506th_suppress_impactIntensity = 0.5;
+force v506th_suppress_masterIntensity = 0.65;
+force v506th_suppress_pulseIntensity = 0.35;
+force v506th_suppress_radialBlurIntensity = 0.6;
 
 // No More Aircraft Bouncing
 force NMAB_setting_classExclusions = "";
@@ -993,7 +993,7 @@ NMAB_setting_pfxHelicopters = true;
 NMAB_setting_pfxPlanes = true;
 
 // TFAR - Clientside settings
-TFAR_curatorCamEars = false;
+TFAR_curatorCamEars = true;
 TFAR_default_radioVolume = 6;
 TFAR_intercomDucking = 0.2;
 TFAR_intercomVolume = 0.1;
