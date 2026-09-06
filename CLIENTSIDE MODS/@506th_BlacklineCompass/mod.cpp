@@ -1,4 +1,4 @@
-name = "506thBlacklineCompass_v1.3.3";
+name = "506thBlacklineCompass_v1.3.8";
 picture = "logolarge.paa";
 actionName = "";
 action = "";
